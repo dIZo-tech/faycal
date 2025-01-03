@@ -1,139 +1,65 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Style général de la page */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background: linear-gradient(to right, #6a11cb, #2575fc); /* Dégradé vibrant */
-    color: #fff; /* Texte blanc pour un bon contraste */
-}
-
-header {
-    background: rgba(0, 0, 0, 0.7); /* Fond sombre pour l'en-tête */
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-h1 {
-    font-family: 'Lobster', cursive;
-    font-size: 3em; /* Taille de texte plus grande */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    color: #fff; /* Lien blanc */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.3s; /* Transition pour le lien */
-}
-
-nav a:hover {
-    color: #ffdd57; /* Changement de couleur au survol */
-    transform: scale(1.1); /* Légère augmentation de taille au survol */
-}
-
-section {
-    padding: 20px;
-    margin: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Fond clair avec transparence */
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-h2 {
-    font-family: 'Lobster', cursive;
-    margin-bottom: 10px;
-    color: #ffdd57; /* Couleur dorée pour les titres de section */
-}
-
-h3 {
-    font-family: 'Roboto', sans-serif;
-    color: #ffdd57; /* Couleur dorée pour les sous-titres */
-}
-
-.gallery {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.gallery img {
-    width: calc(25% - 10px);
-    border-radius: 10px;
-    transition: transform 0.2s, box-shadow 0.2s; /* Ajout d'effets */
+/* Conteneur du formulaire */
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
-.gallery img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-footer {
+/* Titre du formulaire */
+h2 {
     text-align: center;
-    padding: 20px 0;
-    background: rgba(0, 0, 0, 0.7); /* Fond sombre pour le pied de page */
-    color: #fff; /* Texte blanc */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    color: #333;
 }
 
-/* Styles pour le diaporama */
-.slideshow-container {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden; /* Assure que rien ne déborde */
+/* Style des champs du formulaire */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.mySlides {
-    display: none; /* Cache toutes les images par défaut */
+/* Style des labels */
+label {
+    margin: 10px 0 5px;
+    color: #555;
 }
 
-.mySlides img {
-    width: 100%; /* Ajuste l'image à la largeur de l'écran */
-    height: auto; /* Ajuste la hauteur de l'image automatiquement */
-    border-radius: 10px; /* Coins arrondis pour le diaporama */
+/* Style des champs de saisie */
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-/* Style des points de navigation */
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+/* Style du bouton de soumission */
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.dot:hover {
-    background-color: #ffdd57; /* Changement de couleur au survol */
+button:hover {
+    background-color: #45a049;
 }
 
-/* Effet de fondu pour le diaporama */
-.fade {
-    animation: fade 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-/* Centrer la vidéo */
-video {
-    display: block;
-    margin: 20px auto; /* Centre la vidéo */
+/* Style du message d'erreur */
+#error-message {
+    text-align: center;
+    font-size: 14px;
 }
